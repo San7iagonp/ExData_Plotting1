@@ -10,5 +10,6 @@ Power$Date <- as.Date(Power$Date, format="%d/%m/%Y")
 NewPower <- subset(Power, Date== "2007-02-01" |  Date== "2007-02-02")
 
 png("plot2.png")
+par(bg=NA) 
 plot(NewPower$Time, NewPower$Global_active_power, type="l", ylab="Global Active Power (kilowatts)", xlab="") 
 dev.off()
